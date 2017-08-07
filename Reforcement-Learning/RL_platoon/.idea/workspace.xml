@@ -8,80 +8,9 @@
     <bookmark url="file://$PROJECT_DIR$/../RL_platoon/crown_test/car_env.py" line="340" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b103262a-4539-4e30-9f36-6063cc6e5203" name="Default" comment="Change file">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../RL_platoon/experiments/Robot_arm/hard/DDPG.ckpt.data-00000-of-00001" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../RL_platoon/experiments/Robot_arm/hard/DDPG.ckpt.index" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../RL_platoon/experiments/Robot_arm/hard/DDPG.ckpt.meta" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../RL_platoon/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../RL_platoon/.idea/RL_platoon.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../RL_platoon/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../RL_platoon/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../RL_platoon/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../RL_platoon/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../RL_platoon/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../RL_platoon/experiments/Robot_arm/hard/checkpoint" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/10_A3C/A3C_RNN.py" afterPath="$PROJECT_DIR$/../RL_platoon/10_A3C/A3C_RNN.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/10_A3C/A3C_continuous_action.py" afterPath="$PROJECT_DIR$/../RL_platoon/10_A3C/A3C_continuous_action.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/10_A3C/A3C_discrete_action.py" afterPath="$PROJECT_DIR$/../RL_platoon/10_A3C/A3C_discrete_action.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/11_Dyna_Q/RL_brain.py" afterPath="$PROJECT_DIR$/../RL_platoon/11_Dyna_Q/RL_brain.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/11_Dyna_Q/maze_env.py" afterPath="$PROJECT_DIR$/../RL_platoon/11_Dyna_Q/maze_env.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/11_Dyna_Q/run_this.py" afterPath="$PROJECT_DIR$/../RL_platoon/11_Dyna_Q/run_this.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1_command_line_reinforcement_learning/treasure_on_right.py" afterPath="$PROJECT_DIR$/../RL_platoon/1_command_line_reinforcement_learning/treasure_on_right.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2_Q_Learning_maze/RL_brain.py" afterPath="$PROJECT_DIR$/../RL_platoon/2_Q_Learning_maze/RL_brain.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2_Q_Learning_maze/maze_env.py" afterPath="$PROJECT_DIR$/../RL_platoon/2_Q_Learning_maze/maze_env.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2_Q_Learning_maze/run_this.py" afterPath="$PROJECT_DIR$/../RL_platoon/2_Q_Learning_maze/run_this.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/3_Sarsa_maze/RL_brain.py" afterPath="$PROJECT_DIR$/../RL_platoon/3_Sarsa_maze/RL_brain.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/3_Sarsa_maze/maze_env.py" afterPath="$PROJECT_DIR$/../RL_platoon/3_Sarsa_maze/maze_env.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/3_Sarsa_maze/run_this.py" afterPath="$PROJECT_DIR$/../RL_platoon/3_Sarsa_maze/run_this.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/4_Sarsa_lambda_maze/RL_brain.py" afterPath="$PROJECT_DIR$/../RL_platoon/4_Sarsa_lambda_maze/RL_brain.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/4_Sarsa_lambda_maze/maze_env.py" afterPath="$PROJECT_DIR$/../RL_platoon/4_Sarsa_lambda_maze/maze_env.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/4_Sarsa_lambda_maze/run_this.py" afterPath="$PROJECT_DIR$/../RL_platoon/4_Sarsa_lambda_maze/run_this.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/5.1_Double_DQN/RL_brain.py" afterPath="$PROJECT_DIR$/../RL_platoon/5.1_Double_DQN/RL_brain.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/5.1_Double_DQN/run_Pendulum.py" afterPath="$PROJECT_DIR$/../RL_platoon/5.1_Double_DQN/run_Pendulum.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/5.2_Prioritized_Replay_DQN/RL_brain.py" afterPath="$PROJECT_DIR$/../RL_platoon/5.2_Prioritized_Replay_DQN/RL_brain.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/5.2_Prioritized_Replay_DQN/run_MountainCar.py" afterPath="$PROJECT_DIR$/../RL_platoon/5.2_Prioritized_Replay_DQN/run_MountainCar.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/5.3_Dueling_DQN/RL_brain.py" afterPath="$PROJECT_DIR$/../RL_platoon/5.3_Dueling_DQN/RL_brain.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/5.3_Dueling_DQN/run_Pendulum.py" afterPath="$PROJECT_DIR$/../RL_platoon/5.3_Dueling_DQN/run_Pendulum.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/5_Deep_Q_Network/DQN_modified.py" afterPath="$PROJECT_DIR$/../RL_platoon/5_Deep_Q_Network/DQN_modified.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/5_Deep_Q_Network/RL_brain.py" afterPath="$PROJECT_DIR$/../RL_platoon/5_Deep_Q_Network/RL_brain.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/5_Deep_Q_Network/maze_env.py" afterPath="$PROJECT_DIR$/../RL_platoon/5_Deep_Q_Network/maze_env.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/5_Deep_Q_Network/run_this.py" afterPath="$PROJECT_DIR$/../RL_platoon/5_Deep_Q_Network/run_this.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/6_OpenAI_gym/RL_brain.py" afterPath="$PROJECT_DIR$/../RL_platoon/6_OpenAI_gym/RL_brain.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/6_OpenAI_gym/run_CartPole.py" afterPath="$PROJECT_DIR$/../RL_platoon/6_OpenAI_gym/run_CartPole.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/6_OpenAI_gym/run_MountainCar.py" afterPath="$PROJECT_DIR$/../RL_platoon/6_OpenAI_gym/run_MountainCar.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/7_Policy_gradient_softmax/RL_brain.py" afterPath="$PROJECT_DIR$/../RL_platoon/7_Policy_gradient_softmax/RL_brain.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/7_Policy_gradient_softmax/run_CartPole.py" afterPath="$PROJECT_DIR$/../RL_platoon/7_Policy_gradient_softmax/run_CartPole.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/7_Policy_gradient_softmax/run_MountainCar.py" afterPath="$PROJECT_DIR$/../RL_platoon/7_Policy_gradient_softmax/run_MountainCar.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/8_Actor_Critic_Advantage/AC_CartPole.py" afterPath="$PROJECT_DIR$/../RL_platoon/8_Actor_Critic_Advantage/AC_CartPole.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/8_Actor_Critic_Advantage/AC_continue_Pendulum.py" afterPath="$PROJECT_DIR$/../RL_platoon/8_Actor_Critic_Advantage/AC_continue_Pendulum.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/9_Deep_Deterministic_Policy_Gradient_DDPG/DDPG.py" afterPath="$PROJECT_DIR$/../RL_platoon/9_Deep_Deterministic_Policy_Gradient_DDPG/DDPG.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/crown_test/DDPG_for_platoon.py" afterPath="$PROJECT_DIR$/../RL_platoon/crown_test/DDPG_for_platoon.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/crown_test/DDPG_logs/events.out.tfevents.1495550809.DESKTOP-JOIUG6A" afterPath="$PROJECT_DIR$/../RL_platoon/crown_test/DDPG_logs/events.out.tfevents.1495550809.DESKTOP-JOIUG6A" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/crown_test/DQN_for_platoon.py" afterPath="$PROJECT_DIR$/../RL_platoon/crown_test/DQN_for_platoon.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/crown_test/DQN_logs/events.out.tfevents.1495550608.DESKTOP-JOIUG6A" afterPath="$PROJECT_DIR$/../RL_platoon/crown_test/DQN_logs/events.out.tfevents.1495550608.DESKTOP-JOIUG6A" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/crown_test/Data/DDPG.ckpt.data-00000-of-00001" afterPath="$PROJECT_DIR$/../RL_platoon/crown_test/Data/DDPG.ckpt.data-00000-of-00001" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/crown_test/Data/DDPG.ckpt.index" afterPath="$PROJECT_DIR$/../RL_platoon/crown_test/Data/DDPG.ckpt.index" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/crown_test/Data/DDPG.ckpt.meta" afterPath="$PROJECT_DIR$/../RL_platoon/crown_test/Data/DDPG.ckpt.meta" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/crown_test/Data/checkpoint" afterPath="$PROJECT_DIR$/../RL_platoon/crown_test/Data/checkpoint" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/crown_test/RL_brain_DeepQ.py" afterPath="$PROJECT_DIR$/../RL_platoon/crown_test/RL_brain_DeepQ.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/crown_test/car_env.py" afterPath="$PROJECT_DIR$/../RL_platoon/crown_test/car_env.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/crown_test/car_env_DDPG.py" afterPath="$PROJECT_DIR$/../RL_platoon/crown_test/car_env_DDPG.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/crown_test/conventional_following_for_platoon.py" afterPath="$PROJECT_DIR$/../RL_platoon/crown_test/conventional_following_for_platoon.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/crown_test/plot_funcion.py" afterPath="$PROJECT_DIR$/../RL_platoon/crown_test/plot_funcion.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/crown_test/plot_reward_function.py" afterPath="$PROJECT_DIR$/../RL_platoon/crown_test/plot_reward_function.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/experiments/Robot_arm/A3C.py" afterPath="$PROJECT_DIR$/../RL_platoon/experiments/Robot_arm/A3C.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/experiments/Robot_arm/DDPG.py" afterPath="$PROJECT_DIR$/../RL_platoon/experiments/Robot_arm/DDPG.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/experiments/Robot_arm/arm_env.py" afterPath="$PROJECT_DIR$/../RL_platoon/experiments/Robot_arm/arm_env.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/experiments/Robot_arm/hard-data-5-17-12_52/DDPG.ckpt.data-00000-of-00001" afterPath="$PROJECT_DIR$/../RL_platoon/experiments/Robot_arm/hard-data-5-17-12_52/DDPG.ckpt.data-00000-of-00001" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/experiments/Robot_arm/hard-data-5-17-12_52/DDPG.ckpt.index" afterPath="$PROJECT_DIR$/../RL_platoon/experiments/Robot_arm/hard-data-5-17-12_52/DDPG.ckpt.index" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/experiments/Robot_arm/hard-data-5-17-12_52/DDPG.ckpt.meta" afterPath="$PROJECT_DIR$/../RL_platoon/experiments/Robot_arm/hard-data-5-17-12_52/DDPG.ckpt.meta" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/experiments/Robot_arm/hard-data-5-17-12_52/checkpoint" afterPath="$PROJECT_DIR$/../RL_platoon/experiments/Robot_arm/hard-data-5-17-12_52/checkpoint" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/experiments/Solve_BipedalWalker/A3C.py" afterPath="$PROJECT_DIR$/../RL_platoon/experiments/Solve_BipedalWalker/A3C.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/experiments/Solve_BipedalWalker/A3C_rnn.py" afterPath="$PROJECT_DIR$/../RL_platoon/experiments/Solve_BipedalWalker/A3C_rnn.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/experiments/Solve_BipedalWalker/DDPG.py" afterPath="$PROJECT_DIR$/../RL_platoon/experiments/Solve_BipedalWalker/DDPG.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/experiments/Solve_LunarLander/A3C.py" afterPath="$PROJECT_DIR$/../RL_platoon/experiments/Solve_LunarLander/A3C.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/experiments/Solve_LunarLander/DuelingDQNPrioritizedReplay.py" afterPath="$PROJECT_DIR$/../RL_platoon/experiments/Solve_LunarLander/DuelingDQNPrioritizedReplay.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/experiments/Solve_LunarLander/run_LunarLander.py" afterPath="$PROJECT_DIR$/../RL_platoon/experiments/Solve_LunarLander/run_LunarLander.py" />
+    <list default="true" id="b103262a-4539-4e30-9f36-6063cc6e5203" name="Default" comment="Change directory name.&#10;1.将目录名字改成了RL_platoon，原来是RL_TEST.">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Machine_Learning/test.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../RL_platoon/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../RL_platoon/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -152,8 +81,8 @@
       <file leaf-file-name="conventional_following_for_platoon.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../RL_platoon/crown_test/conventional_following_for_platoon.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1242">
-              <caret line="71" column="23" lean-forward="true" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
+            <state relative-caret-position="270">
+              <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -655,7 +584,14 @@
       <option name="project" value="LOCAL" />
       <updated>1501863191576</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Change directory name.&#10;1.将目录名字改成了RL_platoon，原来是RL_TEST.">
+      <created>1502107443456</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1502107443456</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -755,7 +691,8 @@
     <MESSAGE value="Format code files' names.&#10;1.规范了代码文件的名称。_env表示车辆模型，_for_platoon表示控制的方法." />
     <MESSAGE value="Add Pipes car-following model for conventional platoon following.&#10;1.给传统的跟驰测试环境增加了Pipes跟驰模型." />
     <MESSAGE value="Modify plot_function.&#10;1.完善了plot_function画inter-space的部分." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify plot_function.&#10;1.完善了plot_function画inter-space的部分." />
+    <MESSAGE value="Change directory name.&#10;1.将目录名字改成了RL_platoon，原来是RL_TEST." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change directory name.&#10;1.将目录名字改成了RL_platoon，原来是RL_TEST." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1228,8 +1165,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../RL_platoon/crown_test/conventional_following_for_platoon.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="71" column="23" lean-forward="true" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
+        <state relative-caret-position="270">
+          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
           <folding />
         </state>
       </provider>
