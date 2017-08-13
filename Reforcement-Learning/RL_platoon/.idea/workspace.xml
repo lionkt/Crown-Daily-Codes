@@ -9,7 +9,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b103262a-4539-4e30-9f36-6063cc6e5203" name="Default" comment="Change directory name.&#10;1.将目录名字改成了RL_platoon，原来是RL_TEST.">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Machine_Learning/test.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../RL_platoon/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../RL_platoon/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

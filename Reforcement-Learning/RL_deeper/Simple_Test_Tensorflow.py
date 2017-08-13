@@ -1,5 +1,6 @@
 import tensorflow as tf
 import numpy as np
+import matplotlib.pyplot as plt
 
 MAX_STEP = 1000
 
@@ -72,11 +73,58 @@ def linear_official_test():
         print("w:%s, b:%s" % (final_W, final_b))
 
 
+# 给神经网络添加层
+def add_layer(inputs, in_size, out_size, activation_function=None):
+    weight = tf.Variable(tf.random_normal([in_size, out_size]))
+    b = tf.Variable(tf.zeros([1, out_size]))
+    weight_plus_b = tf.matmul(inputs, weight) + b
+    if activation_function is None:
+        output = weight_plus_b
+    else:
+        output = activation_function(weight_plus_b)
+    return output
 
 
+# 创建网络的测试
+def test_build_networks():
+    # train data
+    x_data = np.linspace(-1, 1, 300)[:, np.newaxis]
+    y_data = np.square(x_data) + np.random.normal(0, 0.05, x_data.shape)
+
+    # input and output
+    x = tf.placeholder(tf.float32, [None, 1])
+    y = tf.placeholder(tf.float32, [None, 1])
+    # build net
+    l1 = add_layer(x, 1, 10, tf.nn.relu)
+    prediction = add_layer(l1, 10, 1, activation_function=None)
+    # loss function
+    loss = tf.reduce_mean(tf.reduce_sum(tf.square(prediction - y), axis=1))
+    # optimizer
+    optimizer = tf.train.GradientDescentOptimizer(0.05).minimize(loss)
+
+    # mainloop
+    init = tf.global_variables_initializer()
+    with tf.Session() as sess:
+        sess.run(init)
+        for th_ in range(MAX_STEP):
+            sess.run(optimizer, feed_dict={x: x_data, y: y_data})
+            if th_ % 50 == 0:
+                print('train_loss:', sess.run(loss, feed_dict={x: x_data, y: y_data}))
+
+        # test
+        x_test = np.linspace(0, 1, 30, dtype=np.float32)[:, np.newaxis]
+        y_test = np.square(x_test)
+        fig = plt.figure()
+
+        plt.plot(x_test,y_test)
+        predict_value = sess.run(prediction,feed_dict={x:x_test})
+        plt.plot(x_test,predict_value,'r-',lw=3)
+        plt.show()
+        # print('predict:\n', sess.run(prediction, feed_dict={x: x_test}))
 
 
 if __name__ == "__main__":
     # linear_regression()
     # test_placeholder()
-    linear_official_test()
+    # linear_official_test()
+    test_build_networks()
