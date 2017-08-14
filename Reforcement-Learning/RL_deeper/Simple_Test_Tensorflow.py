@@ -74,51 +74,76 @@ def linear_official_test():
 
 
 # 给神经网络添加层
-def add_layer(inputs, in_size, out_size, activation_function=None):
-    weight = tf.Variable(tf.random_normal([in_size, out_size]))
-    b = tf.Variable(tf.zeros([1, out_size]))
-    weight_plus_b = tf.matmul(inputs, weight) + b
-    if activation_function is None:
-        output = weight_plus_b
+# 包含了对tensorboard的命名块测试，以及训练过程统计
+def add_layer(inputs, in_size, out_size, activation_function=None, layer_name=None):
+    my_name = ''
+    if layer_name is None:
+        my_name = 'layer'
     else:
-        output = activation_function(weight_plus_b)
-    return output
+        my_name = layer_name
+    with tf.name_scope(my_name):
+        with tf.name_scope('w'):
+            weight = tf.Variable(tf.random_normal([in_size, out_size]))
+            tf.summary.histogram(layer_name + '/w', weight)  # 统计w
+        with tf.name_scope('b'):
+            b = tf.Variable(tf.zeros([1, out_size]))
+            tf.summary.histogram(layer_name + '/b', b)  # 统计b
+        with tf.name_scope('w_plus_b'):
+            weight_plus_b = tf.matmul(inputs, weight) + b
+        if activation_function is None:
+            output = weight_plus_b
+        else:
+            output = activation_function(weight_plus_b)
+        tf.summary.histogram(layer_name + '/output', output)  # 统计输出
+        return output
 
 
 # 创建网络的测试
+# 包含了对tensorboard的命名块测试，以及训练过程统计
 def test_build_networks():
     # train data
     x_data = np.linspace(-1, 1, 300)[:, np.newaxis]
     y_data = np.square(x_data) + np.random.normal(0, 0.05, x_data.shape)
 
     # input and output
-    x = tf.placeholder(tf.float32, [None, 1])
-    y = tf.placeholder(tf.float32, [None, 1])
+    with tf.name_scope('input'):
+        with tf.name_scope('x_in'):
+            x = tf.placeholder(tf.float32, [None, 1])
+        with tf.name_scope('y_in'):
+            y = tf.placeholder(tf.float32, [None, 1])
+
     # build net
-    l1 = add_layer(x, 1, 10, tf.nn.relu)
-    prediction = add_layer(l1, 10, 1, activation_function=None)
+    l1 = add_layer(x, 1, 10, tf.nn.relu, layer_name='l1')
+    prediction = add_layer(l1, 10, 1, layer_name='l2', activation_function=None)
     # loss function
-    loss = tf.reduce_mean(tf.reduce_sum(tf.square(prediction - y), axis=1))
+    with tf.name_scope('loss'):
+        loss = tf.reduce_mean(tf.reduce_sum(tf.square(prediction - y), axis=1))
+        tf.summary.scalar('loss', loss)  # 这样写会将loss的统计图放在events下面
     # optimizer
-    optimizer = tf.train.GradientDescentOptimizer(0.05).minimize(loss)
+    with tf.name_scope('optimizer'):
+        optimizer = tf.train.GradientDescentOptimizer(0.05).minimize(loss)
 
     # mainloop
     init = tf.global_variables_initializer()
     with tf.Session() as sess:
         sess.run(init)
+        merged = tf.summary.merge_all()  # 合并所有的训练图
+        writer = tf.summary.FileWriter('./logs/', sess.graph)  # 输出graph
         for th_ in range(MAX_STEP):
             sess.run(optimizer, feed_dict={x: x_data, y: y_data})
             if th_ % 50 == 0:
                 print('train_loss:', sess.run(loss, feed_dict={x: x_data, y: y_data}))
+                rs = sess.run(merged, feed_dict={x: x_data, y: y_data})  # 需要记录训练的数据，才能画出比较完整的统计图
+                writer.add_summary(rs, th_)
 
         # test
         x_test = np.linspace(0, 1, 30, dtype=np.float32)[:, np.newaxis]
         y_test = np.square(x_test)
         fig = plt.figure()
 
-        plt.plot(x_test,y_test)
-        predict_value = sess.run(prediction,feed_dict={x:x_test})
-        plt.plot(x_test,predict_value,'r-',lw=3)
+        plt.plot(x_test, y_test)
+        predict_value = sess.run(prediction, feed_dict={x: x_test})
+        plt.plot(x_test, predict_value, 'r-', lw=3)
         plt.show()
         # print('predict:\n', sess.run(prediction, feed_dict={x: x_test}))
 
