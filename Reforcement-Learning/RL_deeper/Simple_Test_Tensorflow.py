@@ -86,7 +86,7 @@ def add_layer(inputs, in_size, out_size, activation_function=None, layer_name=No
             weight = tf.Variable(tf.random_normal([in_size, out_size]))
             tf.summary.histogram(layer_name + '/w', weight)  # 统计w
         with tf.name_scope('b'):
-            b = tf.Variable(tf.zeros([1, out_size]))
+            b = tf.Variable(tf.zeros([1, out_size]) + 0.1)
             tf.summary.histogram(layer_name + '/b', b)  # 统计b
         with tf.name_scope('w_plus_b'):
             weight_plus_b = tf.matmul(inputs, weight) + b
@@ -148,8 +148,39 @@ def test_build_networks():
         # print('predict:\n', sess.run(prediction, feed_dict={x: x_test}))
 
 
+# 用mnist测试神经网络。TF的mnist中包含了训练集、测试集、随机抽样等函数，用起来很方便
+# 可以参考的代码 https://github.com/MorvanZhou/tutorials/blob/master/tensorflowTUT/tf16_classification/full_code.py
+def test_MNIST_classification():
+    from tensorflow.examples.tutorials.mnist import input_data
+    mnist = input_data.read_data_sets('MNIST-data', one_hot=True)
+    xs = tf.placeholder(tf.float32, [None, 28 * 28])  # mnist的图像尺寸
+    ys = tf.placeholder(tf.float32, [None, 10])  # mnist的分类结果
+    # build net
+    # 实验发现，激活函数对网络的训练结果有很大影响。如果选择tf.nn.relu，则正确率不超过10%
+    prediction = add_layer(xs, 784, 10, activation_function=tf.nn.softmax, layer_name='l1')
+    # loss
+    loss = tf.reduce_mean(-tf.reduce_sum(ys * tf.log(prediction), axis=1))
+    optimizer = tf.train.GradientDescentOptimizer(0.5).minimize(loss)
+    # main loop
+    init = tf.global_variables_initializer()
+    with tf.Session() as sess:
+        sess.run(init)
+        for th_ in range(MAX_STEP):
+            batch_xs, batch_ys = mnist.train.next_batch(100)
+            sess.run(optimizer, feed_dict={xs: batch_xs, ys: batch_ys})
+            if th_ % 50 == 0:
+                # 利用mnist数据集中的测试集，测试训练的精确度
+                x_test = mnist.test.images
+                y_test = mnist.test.labels
+                prediction_value = sess.run(prediction, feed_dict={xs: x_test})
+                compute_accuracy = tf.equal(tf.arg_max(prediction_value, dimension=1), tf.arg_max(y_test, dimension=1))
+                accuracy_value = tf.reduce_mean(tf.cast(compute_accuracy, tf.float32))
+                print('accuracy:', sess.run(accuracy_value, feed_dict={xs: x_test, ys: y_test}))
+
+
 if __name__ == "__main__":
     # linear_regression()
     # test_placeholder()
     # linear_official_test()
-    test_build_networks()
+    # test_build_networks()
+    test_MNIST_classification()
